@@ -1,6 +1,6 @@
 # 📱 Home Screen
 
-Welcome to the **Home Screen** of our application! Below are the screenshots showcasing the UI design and features.
+Welcome to the **Home Screen** of our application! Below are the screenshots showcasing the UI design.
 
 ## 🌟 Screenshots
 
