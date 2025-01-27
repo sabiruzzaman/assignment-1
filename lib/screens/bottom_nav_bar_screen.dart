@@ -34,13 +34,13 @@ class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF11161F),
+      backgroundColor: const Color(0xFF11161F),
       body: _screens[_selectedIndex], // Display the selected screen
       bottomNavigationBar: Container(
-        margin: EdgeInsets.all(10),
-        padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+        margin: const EdgeInsets.all(10),
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
         decoration: BoxDecoration(
-          color: Color(0xFF161B24),
+          color: const Color(0xFF161B24),
           borderRadius: BorderRadius.circular(30),
         ),
         child: Row(

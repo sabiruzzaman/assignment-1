@@ -52,7 +52,7 @@ class _CategorySectionState extends State<CategorySection> {
       return GestureDetector(
         onTap: () {
           setState(() {
-            selectedCategory = category; // Update the selected category on tap
+            selectedCategory = category; // Update the selected category
           });
         },
         child: Padding(
@@ -66,7 +66,6 @@ class _CategorySectionState extends State<CategorySection> {
               borderRadius: BorderRadius.circular(12),
             ),
             padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-            // Adjusted internal padding
             child: Text(
               category,
               style: TextStyle(
