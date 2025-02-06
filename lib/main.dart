@@ -1,4 +1,11 @@
 import 'package:assignment1/screens/bottom_nav_bar_screen.dart';
+import 'package:assignment1/screens/code_verification_screen.dart';
+import 'package:assignment1/screens/details_screen.dart';
+import 'package:assignment1/screens/forgot_password_screen.dart';
+import 'package:assignment1/screens/login_screen.dart';
+import 'package:assignment1/screens/reset_password_screen.dart';
+import 'package:assignment1/screens/sign_up_screen.dart';
+import 'package:assignment1/screens/subscription_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -17,9 +24,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: BottomNavBarScreen(),
+      //    home: BottomNavBarScreen(),
+      home: LoginScreen(),
     );
   }
 }

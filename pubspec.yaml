@@ -60,6 +60,10 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+    - assets/facebook.png
+    - assets/google.png
+    - assets/twitter.png
+    - assets/logo.png
     - assets/profile.png
     - assets/banner.png
     - assets/trending_movies_1.png
@@ -71,6 +75,20 @@ flutter:
     - assets/recommended_1.png
     - assets/recommended_2.png
     - assets/recommended_3.png
+    - assets/dw_1.png
+    - assets/dw_2.png
+    - assets/dw_3.png
+    - assets/dw_4.png
+    - assets/dw_5.png
+    - assets/dw_6.png
+    - assets/details_banner.png
+    - assets/image.png
+    - assets/actor_1.jpeg
+    - assets/actor_2.jpeg
+    - assets/actor_3.jpg
+    - assets/details_image_2.png
+    - assets/edit.png
+
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

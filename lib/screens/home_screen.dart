@@ -10,7 +10,6 @@ class HomeScreen extends StatelessWidget {
     {'image': 'assets/trending_movies_1.png', 'title': 'Yes I Do'},
     {'image': 'assets/trending_movies_2.png', 'title': 'Soul Mate'},
     {'image': 'assets/trending_movies_3.png', 'title': 'UB\'s Secret'},
-    {'image': 'assets/trending_movies_4.png', 'title': 'Yes I Do'}
   ];
 
   final List<Map<String, String>> _continueWatching = [
@@ -34,6 +33,10 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    // Subtract 16 padding on left and right (total 32) to get available width.
+    final availableScreenWidth = screenWidth - 32;
+
     return Scaffold(
       backgroundColor: const Color(0xFF11161F),
       body: SafeArea(
@@ -48,10 +51,18 @@ class HomeScreen extends StatelessWidget {
               const SizedBox(height: 20),
               _buildBannerSection(),
               const SizedBox(height: 16),
-              MovieSection(title: 'Trending Movies', items: _trendingMovies),
-              const SizedBox(height: 16),
-              ContinueWatchingSection(continueWatching: _continueWatching),
-              MovieSection(title: 'Recommended For You', items: _recommendedMovies),
+              MovieSection(
+                  title: 'Trending Movies',
+                  items: _trendingMovies,
+                  availableScreenWidth: availableScreenWidth),
+              ContinueWatchingSection(
+                continueWatching: _continueWatching,
+                availableScreenWidth: availableScreenWidth,
+              ),
+              MovieSection(
+                  title: 'Recommended For You',
+                  items: _recommendedMovies,
+                  availableScreenWidth: availableScreenWidth),
             ],
           ),
         ),
@@ -155,5 +166,4 @@ class HomeScreen extends StatelessWidget {
       ),
     );
   }
-
 }

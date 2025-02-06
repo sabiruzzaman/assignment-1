@@ -1,3 +1,6 @@
+import 'package:assignment1/screens/download_screen.dart';
+import 'package:assignment1/screens/profile_screen.dart';
+import 'package:assignment1/screens/tv_shows.dart';
 import 'package:flutter/material.dart';
 import 'home_screen.dart';
 
@@ -14,15 +17,9 @@ class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
   // List of screens for each navigation item
   final List<Widget> _screens = [
     HomeScreen(),
-    const Center(
-        child: Text('TV Shows',
-            style: TextStyle(fontSize: 24, color: Colors.white))),
-    const Center(
-        child: Text('Downloads',
-            style: TextStyle(fontSize: 24, color: Colors.white))),
-    const Center(
-        child: Text('Profile',
-            style: TextStyle(fontSize: 24, color: Colors.white))),
+    TvShows(),
+    const DownloadScreen(),
+    const ProfileScreen(),
   ];
 
   void _onItemTapped(int index) {

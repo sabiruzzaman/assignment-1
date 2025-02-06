@@ -2,16 +2,22 @@ import 'package:flutter/material.dart';
 
 class ContinueWatchingSection extends StatelessWidget {
   final List<Map<String, String>> continueWatching;
+  final double availableScreenWidth;
 
-  const ContinueWatchingSection({super.key, required this.continueWatching});
+  const ContinueWatchingSection(
+      {super.key,
+      required this.continueWatching,
+      required this.availableScreenWidth});
 
   @override
   Widget build(BuildContext context) {
+    final itemWidth = availableScreenWidth / 2 - 16;
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: const EdgeInsets.symmetric(vertical: 4),
+          padding: const EdgeInsets.symmetric(vertical: 8),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -35,9 +41,11 @@ class ContinueWatchingSection extends StatelessWidget {
           height: 180,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
+            physics: const NeverScrollableScrollPhysics(),
             itemCount: continueWatching.length,
             itemBuilder: (context, index) {
-              return _buildContinueWatchingItem(continueWatching[index]);
+              return _buildContinueWatchingItem(
+                  continueWatching[index], itemWidth);
             },
           ),
         ),
@@ -45,14 +53,15 @@ class ContinueWatchingSection extends StatelessWidget {
     );
   }
 
-  Widget _buildContinueWatchingItem(Map<String, String> movie) {
+  Widget _buildContinueWatchingItem(
+      Map<String, String> movie, double itemWidth) {
     double progressPercentage =
         double.parse(movie['progress']!) / 100; // Convert progress to decimal
 
     return Padding(
       padding: const EdgeInsets.only(right: 16),
       child: SizedBox(
-        width: 170,
+        width: itemWidth,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           // Center-aligning the contents
@@ -63,8 +72,7 @@ class ContinueWatchingSection extends StatelessWidget {
                   borderRadius: BorderRadius.circular(12),
                   child: Image.asset(
                     movie['image']!,
-                    width: 170,
-                    height: 110,
+                    width: itemWidth,
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -74,7 +82,7 @@ class ContinueWatchingSection extends StatelessWidget {
                   left: 0,
                   child: Container(
                     height: 5,
-                    width: 170,
+                    width: itemWidth,
                     decoration: const BoxDecoration(
                       color: Color(0xFF221821),
                       // Grey background for progress bar
@@ -91,7 +99,7 @@ class ContinueWatchingSection extends StatelessWidget {
                   left: 0,
                   child: Container(
                     height: 5,
-                    width: 170 * progressPercentage,
+                    width: itemWidth * progressPercentage,
                     // Dynamic width based on progress
                     decoration: BoxDecoration(
                       color: const Color(0xFFFF3440), // Red progress bar
