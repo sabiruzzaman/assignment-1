@@ -18,13 +18,16 @@ Built with Flutter, this project serves as a great starting point for your own T
 ## 🌟 Screenshots
 
 <div align="center">
-  <img src="screenshot/screenshot_1.png" alt="Login" width="20%" >
-  <img src="screenshot/screenshot_2.png" alt="Sign Up" width="20%" >
-  <img src="screenshot/screenshot_3.png" alt="Subscription Page" width="20%" >
+  <img src="screenshot/screenshot_1.png" alt="Login" width="20%"> &nbsp;&nbsp;&nbsp;
+  <img src="screenshot/screenshot_2.png" alt="Sign Up" width="20%"> &nbsp;&nbsp;&nbsp;
+  <img src="screenshot/screenshot_3.png" alt="Subscription Page" width="20%">
+</div>
+</br>
+<div align="center">
+  <img src="screenshot/screenshot_4.png" alt="Home" width="20%"> &nbsp;&nbsp;&nbsp;
+  <img src="screenshot/screenshot_5.png" alt="Tv Shows" width="20%"> &nbsp;&nbsp;&nbsp;
+  <img src="screenshot/screenshot_6.png" alt="Profile Page" width="20%">
 </div>
 
-<div align="center">
-  <img src="screenshot/screenshot_4.png" alt="Home" width="20%" >
-  <img src="screenshot/screenshot_5.png" alt="Tv Shows" width="20%" >
-  <img src="screenshot/screenshot_6.png" alt="Profile Page" width="20%" >
-</div>
+
+
